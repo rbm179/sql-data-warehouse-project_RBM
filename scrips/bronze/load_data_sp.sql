@@ -1,4 +1,18 @@
---EXEC bronze.load_bronze;
+/*
+===========================================================
+This Store procedure loads data into the 'bronze' schema from external CSV files.
+===========================================================
+it performs following actions:
+	- Truncated the 'bronze' tables before loading data
+	- Uses the 'bulk insert' Command to load data from CSV files to bronze tables
+
+Parameters:
+	None.
+	
+Usage Example:
+	EXEC bronze.load_bronze
+
+*/
 
 CREATE OR ALTER PROCEDURE bronze.load_bronze AS
 
